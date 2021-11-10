@@ -4,8 +4,7 @@ const HU = {
     style: 'currency',
     currency: 'HUF'
   }).format(sum),
-  list: (arr) => arr.map((item,i)=> i === arr.length-1 ? ` és ${item}` : `, ${item}`)
-  .join('').slice(2)
+  list: (arr) => arr.slice(0, -1).join(', ') + ' és ' + arr[arr.length - 1]
 }
 
 
